@@ -29,11 +29,11 @@ body {
 			margin-left: 77px;
 	margin-top: 95px;
 		}
-.title {
+		.title {
     margin: -146px auto !important;
     position: absolute;
-}
-		.chmsc{
+		}
+		.nsu{
 			display:none;
 		}
 		.title h3 {
@@ -56,7 +56,7 @@ body {
 			float: none;
 			margin-top: 0px !important;
 		}
-		.chmsc {
+		.nsu {
 			font-size: 10px !important;
 		}
 		#login .form-signin {
@@ -86,9 +86,7 @@ font-family: 'TR Century Gothic';
 	src: url('TR Century Gothic.ttf');
 }
 .motto{}
-.motto p:first-child{
-	font-size: 30px !important;
-}
+
 .motto p{
 	font-size: 20px
 
@@ -96,7 +94,7 @@ font-family: 'TR Century Gothic';
 body{
     background-color: rgba(0, 0, 0, 0) !important;
 }
-.chmsc{
+.nsu{
 	font-weight: bold;
 	color: #FFFF00;
     font-size: 12px;

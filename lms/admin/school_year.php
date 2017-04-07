@@ -24,7 +24,7 @@
 										<thead>
 										  <tr>
 												<th></th>
-												<th>School Year</th>
+												<th>Academic Year</th>
 												<th></th>
 										   </tr>
 										</thead>

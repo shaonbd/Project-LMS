@@ -2,14 +2,14 @@
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-		<h3 id="myModalLabel">Change Avatar</h3>
+		<h3 id="myModalLabel">Change Profile Picture</h3>
 	</div>
 		<div class="modal-body">
 					<form method="post" action="teacher_avatar.php" enctype="multipart/form-data">
 							<center>	
 								<div class="control-group">
 								<div class="controls">
-									<input name="image" class="input-file uniform_on" id="fileInput" type="file" required>
+									<input name="image" class="input-file uniform_on" id="fileInput" type="file" accept="image/*" required>
 								</div>
 								</div>
 							</center>			

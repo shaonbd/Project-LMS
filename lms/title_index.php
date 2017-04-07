@@ -13,8 +13,8 @@
 						</div>	
 						<div class="span8">
 						
-								<div class="title">
-							<p class="chmsc">North South University</p>
+						<div class="title">
+							<p class="nsu">North South University</p>
 							<h3>
 
 							<p>Online Classroom</p>
@@ -30,9 +30,7 @@
 						<div class="span12">
 						<br>
 								<div class="motto">
-												<p>CHMSC EXCELS:</p>
-												<p>Excellence, Competence and Educational</p>
-												<p>Leadership in Science and Technology</p>
+												<p>Center of Excellence in Higher Education</p>
 								</div>		
 						</div>		
 				</div>

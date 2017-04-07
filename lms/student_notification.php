@@ -17,7 +17,7 @@
 						$school_year = $school_year_query_row['school_year'];
 						?>
 							<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-							<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+							<li><a href="#">Academic Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -50,7 +50,6 @@
 					<?php $query = mysql_query("select * from teacher_class_student
 					LEFT JOIN teacher_class ON teacher_class.teacher_class_id = teacher_class_student.teacher_class_id 
 					LEFT JOIN class ON class.class_id = teacher_class.class_id 
-					LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
 					LEFT JOIN teacher ON teacher.teacher_id = teacher_class_student.teacher_id 
 					JOIN notification ON notification.teacher_class_id = teacher_class.teacher_class_id 	
 					where teacher_class_student.student_id = '$session_id' and school_year = '$school_year'  order by notification.date_of_notification DESC
@@ -77,9 +76,7 @@
 											<strong><?php echo $row['firstname']." ".$row['lastname'];  ?></strong>
 											<?php echo $row['notification']; ?> In 
 											<a href="<?php echo $row['link']; ?><?php echo '?id='.$get_id; ?>">
-											<?php echo $row['class_name']; ?> 
-											<?php echo $row['subject_code']; ?> 
-									 
+											<?php echo $row['class_name']; ?> 									 
 											</a>
 										<hr>
 										<div class="pull-right">

@@ -15,43 +15,42 @@
 							<hr>
                                 <div class="span3">
 										<center>
-										<img id="developers" src="admin/images/jkev.jpg" class="img-circle">
+										<img id="developers" src="admin/images/alvi.jpg" class="img-circle">
 										<hr>
-										<p>Name: John Kevin Lorayna</p>
-										<p>Address: Bago City</p>
-										<p>Email: jkevlorayna@gmail.com</p>
+										<p>Name: Ashik Mostafa Alvi</p>
+										<p>Address: Bashundhara,Dhaka</p>
+										<p>Email: ashik@gmail.com</p>
 										<p>Position: Programmer</p>
 										</center>
 								</div>
                                 <div class="span3">
 															<center>
-								<img id="developers" src="admin/images/jelyn.jpg" class="img-circle">
+								<img id="developers" src="admin/images/me.jpg" class="img-circle">
 								<hr>
-																				<p>Name: Jorgielyn Serfino</p>
-
-										<p>Address: Bago City</p>
-										<p>Email: jkevlorayna@gmail.com</p>
-										<p>Position: Programmer</p>
+										<p>Name: Manazir Mustafa</p>
+										<p>Address: Mohammadpur, Dhaka</p>
+										<p>Email: manazirmustafa@gmail.com</p>
+										<p>Position: Designer</p>
 								</center>
 								</div>
                                 <div class="span3">
 															<center>
-								<img id="developers" src="admin/images/jorge.jpg" class="img-circle">
+								<img id="developers" src="admin/images/prithvi.jpg" class="img-circle">
 								<hr>
-												<p>Name: Jorgielyn Serfino</p>
-										<p>Address: Ilog</p>
-										<p>Email: jkevlorayna@gmail.com</p>
-										<p>Position: Project Manager</p>
+										<p>Name: Prithvi Ranjan Das</p>
+										<p>Address: Central road, Dhaka</p>
+										<p>Email: confused.prithvi@gmail.com</p>
+										<p>Position: Project Research </p>
 								</center>
 								</div>
                                 <div class="span3">
 															<center>
-								<img id="developers" src="admin/images/mich.jpg" class="img-circle">
+								<img id="developers" src="admin/images/shaon.jpg" class="img-circle">
 								<hr>
-												<p>Name: John Kevin Lorayna</p>
-										<p>Address: Talisay City</p>
-										<p>Email: jkevlorayna@gmail.com</p>
-										<p>Position: Project Manager</p>
+										<p>Name: Faqrul Islam Shaon</p>
+										<p>Address: Middle Badda, Dhaka</p>
+										<p>Email: shaon@gmail.com</p>
+										<p>Position: TBA</p>
 								</center>
 								</div>
                             </div>

@@ -23,7 +23,6 @@
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div id="count_class" class="muted pull-right">
-
 								</div>
                             </div>
                             <div class="block-content collapse in">
@@ -63,7 +62,7 @@
 									</div>
 									<div class="span4">
 											
-			<div class="alert alert-info">Check The Class you want to put this file.</div>
+			<div class="alert alert-info">Check The Class you want to put this Announcement.</div>
 					
 									<div class="pull-left">
 							Check All <input type="checkbox"  name="selectAll" id="checkAll" />
@@ -79,7 +78,6 @@
 										        <tr>
 												<th></th>
 												<th>Class Name</th>
-												<th>Subject Code</th>
 												</tr>
 												
 										</thead>
@@ -87,7 +85,6 @@
 											
                               	<?php $query = mysql_query("select * from teacher_class
 										LEFT JOIN class ON class.class_id = teacher_class.class_id
-										LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
 										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysql_error());
 										$count = mysql_num_rows($query);
 										
@@ -100,8 +97,7 @@
 											<td width="30">
 												<input id="" class="" name="selector[]" type="checkbox" value="<?php echo $id; ?>">
 											</td>
-											<td><?php echo $row['class_name']; ?></td>
-											<td><?php echo $row['subject_code']; ?></td>                                                                   
+											<td><?php echo $row['class_name']; ?></td>                                                                   
 										</tr>
                          
 						<?php } ?>

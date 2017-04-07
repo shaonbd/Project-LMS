@@ -40,7 +40,7 @@
                                         </div>
 										
 										<div class="control-group">
-											<label>School Year:</label>
+											<label>Academic Year:</label>
                                           <div class="controls">
 											<?php
 											$query = mysql_query("select * from school_year order by school_year DESC");

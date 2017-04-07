@@ -17,7 +17,7 @@
 						$school_year = $school_year_query_row['school_year'];
 						?>
 							<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-							<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+							<li><a href="#">Academic Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -30,7 +30,6 @@
 									<?php $query = mysql_query("select * from teacher_class_student
 														LEFT JOIN teacher_class ON teacher_class.teacher_class_id = teacher_class_student.teacher_class_id 
 														LEFT JOIN class ON class.class_id = teacher_class.class_id 
-														LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
 														LEFT JOIN teacher ON teacher.teacher_id = teacher_class.teacher_id
 														where student_id = '$session_id' and school_year = '$school_year'
 														")or die(mysql_error());
@@ -59,7 +58,6 @@
 													</div>
 												</a>
 												<p class="class"><?php echo $row['class_name']; ?></p>
-												<p class="subject"><?php echo $row['subject_code']; ?></p>
 												<p class="subject"><?php echo $row['firstname']." ".$row['lastname']?></p>
 													
 											

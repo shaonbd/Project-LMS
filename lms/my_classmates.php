@@ -12,7 +12,6 @@
 					<?php $query = mysql_query("select * from teacher_class_student
 					LEFT JOIN teacher_class ON teacher_class.teacher_class_id = teacher_class_student.teacher_class_id 
 					JOIN class ON class.class_id = teacher_class.class_id 
-					JOIN subject ON subject.subject_id = teacher_class.subject_id
 					where student_id = '$session_id'
 					")or die(mysql_error());
 					$row = mysql_fetch_array($query);
@@ -20,8 +19,7 @@
 					?>
 					     <ul class="breadcrumb">
 							<li><a href="#"><?php echo $row['class_name']; ?></a> <span class="divider">/</span></li>
-							<li><a href="#"><?php echo $row['subject_code']; ?></a> <span class="divider">/</span></li>
-							<li><a href="#">School Year: <?php echo $row['school_year']; ?></a> <span class="divider">/</span></li>
+							<li><a href="#">Academic Year: <?php echo $row['school_year']; ?></a> <span class="divider">/</span></li>
 							<li><a href="#"><b>My Classmates</b></a></li>
 						</ul>
 						

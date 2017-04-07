@@ -23,7 +23,7 @@
 					<th>Name</th>
 					<th>ID Number</th>
 			
-					<th>Course Yr & Section</th>
+					<th>Course Year & Section</th>
 					<th></th>
 		</tr>
 		</thead>

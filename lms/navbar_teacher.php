@@ -5,7 +5,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-                   <a class="brand" href="#">Welcome to: M - Learning</a>
+                   <a class="brand" href="#">Welcome to: NSU Online Classroom</a>
 							<div class="nav-collapse collapse">
 								<ul class="nav pull-right">
 												<?php $query= mysql_query("select * from teacher where teacher_id = '$session_id'")or die(mysql_error());
@@ -16,7 +16,7 @@
 															<ul class="dropdown-menu">
 																<li>
 																	<a href="change_password_teacher.php"><i class="icon-circle"></i> Change Password</a>
-																	<a tabindex="-1" href="#myModal" data-toggle="modal"><i class="icon-picture"></i> Change Avatar</a>
+																	<a tabindex="-1" href="#myModal" data-toggle="modal"><i class="icon-picture"></i> Change Profile Picture</a>
 																	<a tabindex="-1" href="profile_teacher.php"><i class="icon-user"></i> Profile</a>
 																</li>
 																<li class="divider"></li>

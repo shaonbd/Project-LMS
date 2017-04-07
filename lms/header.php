@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <title>NSU Online Classroom</title>
-		<meta name="description" content="NSY Online Classroom System">
+		<meta name="description" content="NSU Online Classroom System">
 		<meta name="keywords" content="NSU,ECE,CLASSROOM,NSU,RZB,CSE">
 		<meta name="author" content="Alvi,Manazir,Pritvi,Shawon">
 		<meta charset="UTF-8">

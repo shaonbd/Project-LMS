@@ -48,7 +48,6 @@
 					LEFT JOIN student on student.student_id = teacher_notification.student_id
 					LEFT JOIN assignment on assignment.assignment_id = teacher_notification.assignment_id 
 					LEFT JOIN class on teacher_class.class_id = class.class_id
-					LEFT JOIN subject on teacher_class.subject_id = subject.subject_id
 					where teacher_class.teacher_id = '$session_id'  order by  teacher_notification.date_of_notification DESC
 					")or die(mysql_error());
 					$count = mysql_num_rows($query);
@@ -75,9 +74,7 @@
 											<strong><?php echo $row['firstname']." ".$row['lastname'];  ?></strong>
 											<?php echo $row['notification']; ?> In <b><?php echo $row['fname']; ?></b>
 											<a href="<?php echo $row['link']; ?><?php echo '?id='.$get_id; ?>&<?php echo 'post_id='.$assignment_id; ?>">
-											<?php echo $row['class_name']; ?> 
-											<?php echo $row['subject_code']; ?> 
-									 
+											<?php echo $row['class_name']; ?> 									 
 											</a>
 										<hr>
 										<div class="pull-right">

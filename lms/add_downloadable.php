@@ -15,7 +15,7 @@
 								$school_year = $school_year_query_row['school_year'];
 								?>
 								<li><a href="#"><b>My Class</b></a><span class="divider">/</span></li>
-								<li><a href="#">School Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
+								<li><a href="#">Academic Year: <?php echo $school_year_query_row['school_year']; ?></a></li>
 						</ul>
 						 <!-- end breadcrumb -->
 					 
@@ -97,7 +97,6 @@
 										        <tr>
 												<th></th>
 												<th>Class Name</th>
-												<th>Subject Code</th>
 												</tr>
 												
 										</thead>
@@ -105,7 +104,6 @@
 											
                               	<?php $query = mysql_query("select * from teacher_class
 										LEFT JOIN class ON class.class_id = teacher_class.class_id
-										LEFT JOIN subject ON subject.subject_id = teacher_class.subject_id
 										where teacher_id = '$session_id' and school_year = '$school_year' ")or die(mysql_error());
 										$count = mysql_num_rows($query);
 										
@@ -118,8 +116,7 @@
 											<td width="30">
 												<input id="" class="" name="selector[]" type="checkbox" value="<?php echo $id; ?>">
 											</td>
-											<td><?php echo $row['class_name']; ?></td>
-											<td><?php echo $row['subject_code']; ?></td>                                                                   
+											<td><?php echo $row['class_name']; ?></td>                                                                  
 										</tr>
                          
 						<?php } ?>
