@@ -5,9 +5,10 @@
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('calendar_student_sidebar.php'); ?>
+				<?php include('my_classmates_link.php'); ?>
                 <div class="span9" id="content">
                      <div class="row-fluid">
+
 								<!-- breadcrumb -->
 									<?php $class_query = mysql_query("select * from teacher_class
 									LEFT JOIN class ON class.class_id = teacher_class.class_id
@@ -21,6 +22,7 @@
 										<li><a href="#"><b>My Class Calendar</b></a></li>
 									</ul>
 									<!-- end breadcrumb -->
+									
                         <!-- block -->
                         <div id="block_bg" class="block">
                 

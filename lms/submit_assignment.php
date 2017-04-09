@@ -16,7 +16,7 @@
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('assignment_link_student.php'); ?>
+				<?php include('my_classmates_link.php'); ?>
                 <div class="span6" id="content">
                      <div class="row-fluid">
 					   <!-- breadcrumb -->
@@ -51,7 +51,7 @@
 									<div id="">
   											
 												
-				<table cellpadding="0" cellspacing="0" border="0" class="table" id="">
+					<table cellpadding="0" cellspacing="0" border="0" class="table" id="">
 						
 										<thead>
 										        <tr>

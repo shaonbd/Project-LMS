@@ -9,16 +9,9 @@
 				<li class=""><a href="downloadable_student.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-download"></i>&nbsp;Downloadable Materials</a></li>
 				<li class=""><a href="assignment_student.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-book"></i>&nbsp;Assignments</a></li>
 				<li class=""><a href="announcements_student.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-info-sign"></i>&nbsp;Announcements</a></li>
-				<li class=""><a href="class_calendar_student.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-calendar"></i>&nbsp;Class Calendar</a></li>
-				
-				<?php $my_student = mysql_query("SELECT * FROM teacher_class_student where teacher_class_id = '$get_id' and student_id = '$session_id' ")or die(mysql_error());
-														
-						while($row = mysql_fetch_array($my_student)){
-
-							$id = $row['teacher_class_student_id'];
-						}	
-				?>
-
-				<li class=""><a href="student_marks.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;My Grades</a></li>
+				<li class=""><a href="class_calendar_student.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-calendar"></i>&nbsp;Class Calendar</a></li>				
+				<li class=""><a href="student_show_marks.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;My Grades</a></li>
+				<li class=""><a href="student_quiz_list.php<?php echo '?id='.$get_id; ?>"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;Quiz</a></li>
+				<li class=""><a href="#"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;Assign Marks</a></li>
 		</ul>
 </div>

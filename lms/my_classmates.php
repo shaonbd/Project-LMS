@@ -8,7 +8,9 @@
 				<?php include('my_classmates_link.php'); ?>
                 <div class="span9" id="content">
                      <div class="row-fluid">
-					     <!-- breadcrumb -->
+					    
+					<!-- breadcrumb -->
+
 					<?php $query = mysql_query("select * from teacher_class_student
 					LEFT JOIN teacher_class ON teacher_class.teacher_class_id = teacher_class_student.teacher_class_id 
 					JOIN class ON class.class_id = teacher_class.class_id 
@@ -22,8 +24,9 @@
 							<li><a href="#">Academic Year: <?php echo $row['school_year']; ?></a> <span class="divider">/</span></li>
 							<li><a href="#"><b>My Classmates</b></a></li>
 						</ul>
+
 						
-						 <!-- end breadcrumb -->
+					<!-- end breadcrumb -->
 					 
                         <!-- block -->
                         <div id="block_bg" class="block">
@@ -33,25 +36,23 @@
                             <div class="block-content collapse in">
                                 <div class="span12">
 									<ul	 id="da-thumbs" class="da-thumbs">
-										    <?php
-										 
-										 
-														$my_student = mysql_query("SELECT *
-														FROM teacher_class_student
-														LEFT JOIN student ON student.student_id = teacher_class_student.student_id
-														INNER JOIN class ON class.class_id = student.class_id where teacher_class_id = '$get_id' order by lastname ")or die(mysql_error());
+										<?php
+																			 
+											$my_student = mysql_query("SELECT * FROM teacher_class_student LEFT JOIN student ON student.student_id = teacher_class_student.student_id INNER JOIN class ON class.class_id = student.class_id where teacher_class_id = '$get_id' order by lastname ")or die(mysql_error());
 														
-														while($row = mysql_fetch_array($my_student)){
-														$id = $row['teacher_class_student_id'];
-														?>
+											while($row = mysql_fetch_array($my_student)){
+											
+												$id = $row['teacher_class_student_id'];
+										
+										?>
 														
 											<li id="del<?php echo $id; ?>">
 												<a  class="classmate_cursor" href="#">
 														<img id="student_avatar_class" src ="admin/<?php echo $row['location'] ?>" width="124" height="140" class="img-polaroid">
 													<div><span></span></div>
 												</a>
-												<p class="class"><?php echo $row['lastname'];?></p>
-												<p class="subject"><?php echo $row['firstname']; ?></p>
+												<p class="class"><?php echo $row['firstname']; ?></p>
+												<p class="subject"><?php echo $row['lastname'];?></p>					
 											</li>
 									<?php } ?>
 									</ul>
