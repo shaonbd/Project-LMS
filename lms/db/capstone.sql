@@ -704,7 +704,27 @@ INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `class_id`, `usern
 (22, 'Rayhanul Iqbal', 'Evan', 7, 'evan', 'evan', 'evan@gmail.com', 23764383, 'uploads/evan.jpg', 'Unregistered'),
 (23, 'Shajia Naz', 'Pritha', 8, 'pritha', 'pritha', 'pritha@ymail.com', 3483864, 'uploads/NO-IMAGE-AVAILABLE.jpg', 'Unregistered'),
 (24, 'Jane Doe', 'Faria', 9, 'faria', 'faria', 'faria@mail.com', 27134274, 'uploads/faria.jpg', 'Unregistered'),
-(25, 'Jakia Bari', 'Mom', 10, 'mom', 'mom', 'mom@gmail.com', 614325235, '', 'Unregistered');
+(25, 'Jakia Bari', 'Mom', 10, 'mom', 'mom', 'mom@gmail.com', 614325235, '', 'Unregistered'),
+(219, 'Al', 'Amin', 16, 'Amin', 'Amin', 'amin@gmail.com', 614325255, '', 'Unregistered'),
+(220, 'Al-Amin', 'Hossain', 16, 'Hossain', 'Hossain', 'hossain@gmail.com', 614325312, '', 'Unregistered'),
+(221, 'Farjana Jahan', 'Aneela', 16, 'Aneela', 'Aneela', 'aneela@gmail.com', 621651465, '', 'Unregistered'),
+(222, 'Hamza Ibn', 'Alim', 16, 'Alim', 'Alim', 'alim@gmail.com', 5465213, '', 'Unregistered'),
+(223, 'Kaisarul', 'Islam', 16, 'Islam', 'Islam', 'islam@gmail.com', 4613213213, '', 'Unregistered'),
+(224, 'Masrur Ferdous', 'Khan', 16, 'Khan', 'Khan', 'khan@gmail.com', 58321321, '', 'Unregistered'),
+(225, 'Md. Jannatun', 'Nayeem', 16, 'Nayeem', 'Nayeem', 'nayeem@gmail.com', 1321335, '', 'Unregistered'),
+(226, 'Md. Saidur', 'Rahman', 16, 'Saidur', 'Saidur','saidur@gmail.com', 613215235,  '', 'Unregistered'),
+(227, 'Md. Ali', 'Mostakim', 16, 'Mostakim', 'Mostakim', 'mostakim@gmail.com', 61321235, '', 'Unregistered'),
+(228, 'Monirul', 'Alam', 16, 'Alam', 'Alam', 'alam@gmail.com', 611235, '', 'Unregistered'),
+(229, 'Nadim Kaisar', 'Russel', 16, 'Russel', 'Russel', 'russel@gmail.com', 613132235, '', 'Unregistered'),
+(230, 'Md.', 'Nayeem', 16, 'Nayeem', 'Nayeem', 'nayeem@gmail.com', 61321335, '', 'Unregistered'),
+(231, 'Sadia Tanzim', 'Islam', 16, 'Sadia', 'Sadia', 'sadia@gmail.com', 6211235, '', 'Unregistered'),
+(232, 'Saifur Rahman', 'Suzon', 16, 'Suzon', 'Suzon', 'suzon@gmail.com', 6132135, '', 'Unregistered'),
+(233, 'Saqif', 'Masud', 16, 'Masud', 'Masud', 'masud@gmail.com', 61135235, '', 'Unregistered'),
+(234, 'Shahida', 'Sultana', 16, 'Sultana', 'Sultana', 'sultana@gmail.com', 1313235,'', 'Unregistered'),
+(235, 'Shakil', 'Ahmed', 16, 'Shakil', 'Shakil', 'shakil@gmail.com', 6141335, '', 'Unregistered'),
+(236, 'Syed Mohammad', 'Hasin', 16, 'Hasin', 'Hasin', 'hasin@gmail.com', 62131235, '', 'Unregistered'),
+(237, 'Tanvir Asif', 'Ali', 16, 'Ali', 'Ali', 'ali@gmail.com', 614342, '', 'Unregistered'),
+(238, 'Tanzina', 'Sultana', 16, 'Tanzina', 'Tanzina', 'tanzina@gmail.com', 63135235, '', 'Unregistered');
 
 -- --------------------------------------------------------
 
@@ -936,7 +956,8 @@ INSERT INTO `teacher_class` (`teacher_class_id`, `teacher_id`, `class_id`, `seme
 (23, 9, 15, 'Spring''17', 'admin/uploads/thumbnails.jpg', '2017-2017', 'Internet and Web Technology', '', 3, 'CSE323,CSE311'),
 (24, 2, 13, 'Spring''17', 'admin/uploads/thumbnails.jpg', '2017-2017', 'Computer Networks', '', 3, 'CSE332,CSE323'),
 (25, 7, 9, 'Spring''17', 'admin/uploads/thumbnails.jpg', '2017-2017', 'Compiler Construction', '', 3, 'CSE323'),
-(185, 12, 7, '22', 'admin/uploads/thumbnails.jpg', '2013-2014', '', '', 0, '');
+(185, 12, 7, '22', 'admin/uploads/thumbnails.jpg', '2013-2014', '', '', 0, ''),
+(186, 3, 16, 'Spring\'17', 'admin/uploads/thumbnails.jpg', '2017-2017', 'Senior Design Project II', '', 2, 'CSE499B');
 
 -- --------------------------------------------------------
 
@@ -994,7 +1015,46 @@ INSERT INTO `teacher_class_student` (`teacher_class_student_id`, `teacher_class_
 (1, 21, 1, 3, 0, 0, 0, 0),
 (2, 21, 2, 3, 0, 0, 0, 0),
 (5, 21, 3, 3, 0, 0, 0, 0),
-(6, 21, 4, 3, 0, 0, 0, 0);
+(6, 21, 4, 3, 0, 0, 0, 0),
+(7, 3, 4, 10, 0, 0, 0, 0),
+(8, 21, 19, 3, 0, 0, 0, 0),
+(9, 4, 5, 5, 0, 0, 0, 0),
+(10, 20, 20, 1, 0, 0, 0, 0),
+(11, 5, 6, 4, 1, 1, 2, 0),
+(12, 5, 21, 4, 3, 2, 2, 3),
+(13, 6, 7, 9, 0, 0, 0, 0),
+(14, 6, 22, 9, 0, 0, 0, 0),
+(15, 7, 8, 4, 0, 0, 0, 0),
+(16, 7, 23, 4, 0, 0, 0, 0),
+(17, 8, 9, 8, 0, 0, 0, 0),
+(18, 25, 24, 7, 0, 0, 0, 0),
+(19, 9, 10, 5, 0, 0, 0, 0),
+(20, 9, 25, 5, 0, 0, 0, 0),
+(21, 10, 11, 8, 0, 0, 0, 0),
+(22, 11, 12, 10, 0, 0, 0, 0),
+(23, 12, 13, 8, 0, 0, 0, 0),
+(24, 13, 14, 1, 0, 0, 1, 0),
+(25, 14, 15, 5, 0, 0, 0, 0),
+(26, 186, 219, 3, 0, 0, 0, 0),
+(27, 186, 220, 3, 0, 0, 0, 0),
+(28, 186, 221, 3, 0, 0, 0, 0),
+(29, 186, 222, 3, 0, 0, 0, 0),
+(30, 186, 223, 3, 0, 0, 0, 0),
+(31, 186, 224, 3, 0, 0, 0, 0),
+(32, 186, 225, 3, 0, 0, 0, 0),
+(33, 186, 226, 3, 0, 0, 0, 0),
+(34, 186, 227, 3, 0, 0, 0, 0),
+(35, 186, 228, 3, 0, 0, 0, 0),
+(36, 186, 229, 3, 0, 0, 0, 0),
+(37, 186, 230, 3, 0, 0, 0, 0),
+(38, 186, 231, 3, 0, 0, 0, 0),
+(39, 186, 232, 3, 0, 0, 0, 0),
+(40, 186, 233, 3, 0, 0, 0, 0),
+(41, 186, 234, 3, 0, 0, 0, 0),
+(42, 186, 235, 3, 0, 0, 0, 0),
+(43, 186, 236, 3, 0, 0, 0, 0),
+(44, 186, 237, 3, 0, 0, 0, 0),
+(45, 186, 238, 3, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
