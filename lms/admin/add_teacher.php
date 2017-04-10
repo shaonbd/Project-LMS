@@ -34,13 +34,31 @@
 										
 										<div class="control-group">
                                           <div class="controls">
-                                            <input class="input focused" name="firstname" id="focusedInput" type="text" placeholder = "Firstname">
+                                            <input class="input focused" name="firstname" id="focusedInput" type="text" placeholder = "Firstname" required>
                                           </div>
                                         </div>
 										
 										<div class="control-group">
                                           <div class="controls">
-                                            <input class="input focused" name="lastname" id="focusedInput" type="text" placeholder = "Lastname">
+                                            <input class="input focused" name="lastname" id="focusedInput" type="text" placeholder = "Lastname" required>
+                                          </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input class="input focused" name="uname" id="focusedInput" type="text" placeholder = "username" required>
+                                          </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input class="input focused" name="pass" id="focusedInput" type="password" placeholder = "password" required>
+                                          </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input class="input focused" name="about" id="focusedInput" type="text" placeholder = "contact number">
                                           </div>
                                         </div>
 										
@@ -66,6 +84,10 @@
                                 $firstname = $_POST['firstname'];
                                 $lastname = $_POST['lastname'];
                                 $department_id = $_POST['department'];
+                                $uname = $_POST['uname'];
+                                $pass = $_POST['pass'];
+                                $about = $_POST['about'];
+
 								
 								
 								$query = mysql_query("select * from teacher where firstname = '$firstname' and lastname = '$lastname' ")or die(mysql_error());
@@ -78,8 +100,8 @@
 								<?php
 								}else{
 
-                                mysql_query("insert into teacher (firstname,lastname,location,department_id)
-								values ('$firstname','$lastname','uploads/NO-IMAGE-AVAILABLE.jpg','$department_id')         
+                                mysql_query("insert into teacher (username, password, firstname, lastname, department_id, location, about, teacher_status, teacher_stat)
+								values ('$uname','$pass','$firstname','$lastname','$department_id','uploads/NO-IMAGE-AVAILABLE.jpg','$about','Registered','Activated')         
 								") or die(mysql_error()); ?>
 								<script>
 							 	window.location = "teachers.php"; 
