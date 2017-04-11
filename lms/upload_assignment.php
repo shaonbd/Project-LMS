@@ -29,8 +29,8 @@ if ($filedesc == '') {
     $errflag = true;
 }
 
-if ($_FILES['uploaded_file']['size'] >= 1048576 * 5) {
-    $errmsg_arr[] = 'file selected exceeds 5MB size limit';
+if ($_FILES['uploaded_file']['size'] >= 1048576 * 10) {
+    $errmsg_arr[] = 'file selected exceeds 10MB size limit';
     $errflag = true;
 }
 

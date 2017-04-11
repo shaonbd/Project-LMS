@@ -11,8 +11,13 @@ $id_class=$_POST['id_class'];
 $name=$_POST['name'];
 $filedesc=$_POST['desc'];
 $get_id  = $_GET['id'];
+$due_date=$_POST['due_date'];
 $input_name = basename($_FILES['uploaded_file']['name']);
 echo $input_name ;
+
+$tokens = explode('/',$due_date);
+$array = array($tokens[2], $tokens[0], $tokens[1]);
+$due_date = implode("/", $array);
  
 //Function to sanitize values received from the form. Prevents SQL injection
 /* function clean($str) {
@@ -29,7 +34,7 @@ if ($input_name == ""){
 
 			$name_notification  = 'Add Assignment file name'." ".'<b>'.$name.'</b>';
 	   
-                mysql_query("INSERT INTO assignment (fdesc,fdatein,teacher_id,class_id,fname) VALUES ('$filedesc',NOW(),'$session_id','$id_class','$name')")or die(mysql_error());
+                mysql_query("INSERT INTO assignment (fdesc,fdatein,fdue_date,teacher_id,class_id,fname) VALUES ('$filedesc',NOW(),'$due_date','$session_id','$id_class','$name')")or die(mysql_error());
 				 mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'assignment_student.php')")or die(mysql_error());               
 ?>            
 			<script>
@@ -56,7 +61,7 @@ if ($input_name == ""){
             (move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $newname));
                 //successful upload
                 // echo "It's done! The file has been saved as: ".$newname;		   
-                $qry2 = "INSERT INTO assignment (fdesc,floc,fdatein,teacher_id,class_id,fname) VALUES ('$filedesc','$newname',NOW(),'$session_id','$id_class','$name')";
+                $qry2 = "INSERT INTO assignment (fdesc,floc,fdatein,fdue_date,teacher_id,class_id,fname) VALUES ('$filedesc','$newname',NOW(),'$due_date','$session_id','$id_class','$name')";
 				$query = mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'assignment_student.php')")or die(mysql_error());               
 			   //$result = @mysql_query($qry);
                 $result2 = $connector->query($qry2);

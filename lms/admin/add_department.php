@@ -39,7 +39,7 @@ $pi = $_POST['pi'];
 $d = $_POST['d'];
 
 
-$query = mysql_query("select * from department where department_name = '$d' and dean = '$pi' ")or die(mysql_error());
+$query = mysql_query("select * from department where department_name = '$d' and chair = '$pi' ")or die(mysql_error());
 $count = mysql_num_rows($query);
 
 if ($count > 0){ ?>
@@ -48,7 +48,7 @@ alert('Data Already Exist');
 </script>
 <?php
 }else{
-mysql_query("insert into department (department_name,dean) values('$d','$pi')")or die(mysql_error());
+mysql_query("insert into department (department_name,chair) values('$d','$pi')")or die(mysql_error());
 ?>
 <script>
 window.location = "department.php";
