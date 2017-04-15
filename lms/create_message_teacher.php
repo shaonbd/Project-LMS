@@ -24,8 +24,7 @@
                                              	<option></option>
 											<?php
 											$query = mysql_query("select * from teacher_class_student
-																  LEFT JOIN student ON student.student_id = teacher_class_student.student_id
-											 group by teacher_class_student.student_id order by firstname ASC");
+																  LEFT JOIN student ON student.student_id = teacher_class_student.student_id where teacher_class_student.teacher_id = $session_id group by teacher_class_student.student_id order by firstname ASC");
 											while($row = mysql_fetch_array($query)){
 											
 											?>

@@ -63,7 +63,8 @@
 										 <a data-placement="bottom" title="Download" id="<?php echo $id; ?>download"  class="btn btn-info" href="<?php echo $row['floc']; ?>"><i class="icon-download icon-large"></i></a>
 										<?php } ?>
 										 <a data-placement="bottom" title="Remove" id="<?php echo $id; ?>remove"  class="btn btn-danger"  href="#<?php echo $id; ?>" data-toggle="modal"><i class="icon-remove icon-large"></i></a>
-										 <?php include('delete_assigment_modal.php'); ?>									
+										 <?php include('delete_assigment_modal.php'); ?>
+										 <br/><br/>									
 									</td>                                      
 														<script type="text/javascript">
 														$(document).ready(function(){
@@ -89,6 +90,7 @@
 									</table>
                                 </div>
                             </div>
+
                         </div>
                         <!-- /block -->
                     </div>
