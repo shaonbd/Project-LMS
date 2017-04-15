@@ -4,6 +4,7 @@
 --
 -- Host: 127.0.0.1
 -- Generation Time: Apr 11, 2017 at 02:54 PM
+>>>>>>> refs/remotes/origin/master
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -95,7 +96,11 @@ CREATE TABLE `assignment` (
 
 INSERT INTO `assignment` (`assignment_id`, `floc`, `fdatein`, `fdue_date`, `fdesc`, `teacher_id`, `class_id`, `fname`) VALUES
 (2, 'uploads/6843_File_Doc3.docx', '2013-10-11', '0000-00-00', 'fasfasf', 13, 36, 'Assignment number 1'),
+<<<<<<< HEAD
+(66, 'admin/uploads/9312_File_22.pdf', '2017-04-12', '2017-04-15', 'Best', 3, 21, 'Assignment 10');
+=======
 (57, 'admin/uploads/4808_File_18.pdf', '2017-04-11', '2017-04-12', 'Right', 3, 21, 'Assignment 1');
+>>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -195,7 +200,9 @@ INSERT INTO `class_quiz` (`class_quiz_id`, `teacher_class_id`, `quiz_time`, `qui
 (13, 167, 3600, 3),
 (14, 167, 3600, 3),
 (15, 167, 1800, 3),
-(16, 185, 900, 0);
+(16, 185, 900, 0),
+(17, 21, 1200, 6),
+(18, 21, 2160, 7);
 
 -- --------------------------------------------------------
 
@@ -352,7 +359,12 @@ CREATE TABLE `full_marks` (
 
 INSERT INTO `full_marks` (`poll_id`, `poll_name`, `pdatein`, `poll_weight`, `number`, `teacher_class_id`) VALUES
 (18, 'Ethics in engineering', '2017-04-09 18:41:16', 5, 10, 21),
+<<<<<<< HEAD
+(19, 'quiz1', '2017-04-09 19:09:13', 20, 30, 21),
+(20, 'Mid 1', '2017-04-11 11:42:11', 25, 30, 21);
+=======
 (19, 'quiz1', '2017-04-09 19:09:13', 20, 30, 21);
+>>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -387,7 +399,16 @@ INSERT INTO `marks` (`marks_id`, `poll_id`, `marks`, `teacher_class_student_id`)
 (13, 19, 29, 1),
 (14, 19, 27, 2),
 (15, 19, 25, 5),
+<<<<<<< HEAD
+(16, 19, 22, 6),
+(17, 20, 10, 1),
+(18, 20, 10, 2),
+(19, 20, 10, 5),
+(20, 20, 10, 6),
+(21, 20, 10, 8);
+=======
 (16, 19, 22, 6);
+>>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -484,8 +505,18 @@ INSERT INTO `notification` (`notification_id`, `teacher_class_id`, `notification
 (16, 2, 'Add Annoucements', '2017-03-21 03:57:30', 'announcements_student.php'),
 (17, 5, 'Add Annoucements', '2017-03-22 02:26:34', 'announcements_student.php'),
 (18, 21, 'Add Assignment file name <b>ajax with php</b>', '2017-04-09 16:37:00', 'assignment_student.php'),
-(19, 1, 'Add Annoucements', '2017-04-11 14:21:33', 'announcements_student.php'),
-(20, 21, 'Add Annoucements', '2017-04-11 14:22:44', 'announcements_student.php');
+(19, 21, 'Add Practice Quiz file', '2017-04-11 12:21:47', 'student_quiz_list.php'),
+(20, 21, 'Add Assignment file name <b>Assignment 1</b>', '2017-04-11 12:24:15', 'assignment_student.php'),
+(21, 21, 'Add Assignment file name <b>Assignment 1</b>', '2017-04-11 13:39:07', 'assignment_student.php'),
+(22, 21, 'Add Assignment file name <b>alvi</b>', '2017-04-11 14:30:41', 'assignment_student.php'),
+(23, 21, 'Add Practice Quiz file', '2017-04-11 23:43:23', 'student_quiz_list.php'),
+(24, 21, 'Add Assignment file name <b>dfd</b>', '2017-04-11 23:51:10', 'assignment_student.php'),
+(25, 21, 'Add Assignment file name <b>new work</b>', '2017-04-12 00:13:24', 'assignment_student.php'),
+(26, 21, 'Add Assignment file name <b>Nope</b>', '2017-04-12 00:24:34', 'assignment_student.php'),
+(27, 21, 'Add Assignment file name <b>Nope</b>', '2017-04-12 00:25:39', 'assignment_student.php'),
+(28, 21, 'Add Assignment file name <b>alvi</b>', '2017-04-12 00:26:27', 'assignment_student.php'),
+(29, 21, 'Add Assignment file name <b>Assignment 10</b>', '2017-04-12 01:15:00', 'assignment_student.php');
+>>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -513,6 +544,7 @@ INSERT INTO `notification_read` (`notification_read_id`, `student_id`, `student_
 (15, 21, 'yes', 17),
 (16, 4, 'yes', 18),
 (18, 1, 'yes', 18);
+>>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -582,7 +614,8 @@ CREATE TABLE `quiz` (
 INSERT INTO `quiz` (`quiz_id`, `quiz_title`, `quiz_description`, `date_added`, `teacher_id`) VALUES
 (3, 'Sample Test', 'Test', '2013-12-03 23:01:56', 12),
 (4, 'Chapter 1', 'topics', '2013-12-13 01:51:02', 14),
-(5, 'test3', '123', '2014-01-16 04:12:07', 12);
+(5, 'test3', '123', '2014-01-16 04:12:07', 12),
+(7, 'quiz Time', 'Do it', '2017-04-11 23:42:33', 3);
 
 -- --------------------------------------------------------
 
@@ -607,7 +640,9 @@ CREATE TABLE `quiz_question` (
 INSERT INTO `quiz_question` (`quiz_question_id`, `quiz_id`, `question_text`, `question_type_id`, `points`, `date_added`, `answer`) VALUES
 (33, 5, '<p>q</p>\r\n', 2, 0, '2014-01-17 04:15:03', 'False'),
 (34, 3, '<p>Php Stands for ?</p>\r\n', 1, 0, '2014-01-17 12:25:17', 'C'),
-(35, 3, '<p>Echo is a Php code that display the output.</p>\r\n', 2, 0, '2014-01-17 12:26:18', 'True');
+(35, 3, '<p>Echo is a Php code that display the output.</p>\r\n', 2, 0, '2014-01-17 12:26:18', 'True'),
+(36, 6, '<p>Where ?</p>\r\n', 2, 0, '2017-04-11 12:21:31', 'True'),
+(37, 7, '<p>Why ?</p>\r\n', 2, 0, '2017-04-11 23:42:51', 'False');
 
 -- --------------------------------------------------------
 
@@ -780,7 +815,9 @@ CREATE TABLE `student_class_quiz` (
 
 INSERT INTO `student_class_quiz` (`student_class_quiz_id`, `class_quiz_id`, `student_id`, `student_quiz_time`, `grade`) VALUES
 (1, 15, 107, '3600', '0 out of 2'),
-(2, 16, 136, '3600', '0 out of 0');
+(2, 16, 136, '3600', '0 out of 0'),
+(3, 17, 1, '751', ''),
+(4, 18, 1, '751', '');
 
 -- --------------------------------------------------------
 
@@ -1125,6 +1162,7 @@ INSERT INTO `user_log` (`user_log_id`, `username`, `login_date`, `logout_date`, 
 (85, 'admin', '2017-04-11 11:03:56', '2017-04-11 18:51:49', 15),
 (86, 'admin', '2017-04-11 12:33:18', '2017-04-11 18:51:49', 15),
 (87, 'admin', '2017-04-11 18:48:31', '2017-04-11 18:51:49', 15);
+>>>>>>> refs/remotes/origin/master
 
 --
 -- Indexes for dumped tables
@@ -1364,7 +1402,11 @@ ALTER TABLE `answer`
 -- AUTO_INCREMENT for table `assignment`
 --
 ALTER TABLE `assignment`
+<<<<<<< HEAD
+  MODIFY `assignment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+=======
   MODIFY `assignment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+>>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `attendance`
 --
@@ -1379,7 +1421,7 @@ ALTER TABLE `class`
 -- AUTO_INCREMENT for table `class_quiz`
 --
 ALTER TABLE `class_quiz`
-  MODIFY `class_quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `class_quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `class_subject_overview`
 --
@@ -1409,12 +1451,14 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `full_marks`
 --
 ALTER TABLE `full_marks`
-  MODIFY `poll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `poll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+>>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `marks_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `marks_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+>>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `message`
 --
@@ -1429,12 +1473,14 @@ ALTER TABLE `message_sent`
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+>>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `notification_read`
 --
 ALTER TABLE `notification_read`
-  MODIFY `notification_read_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `notification_read_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+>>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `notification_read_teacher`
 --
@@ -1444,12 +1490,12 @@ ALTER TABLE `notification_read_teacher`
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `quiz_question`
 --
 ALTER TABLE `quiz_question`
-  MODIFY `quiz_question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `quiz_question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `school_year`
 --
@@ -1474,7 +1520,7 @@ ALTER TABLE `student_backpack`
 -- AUTO_INCREMENT for table `student_class_quiz`
 --
 ALTER TABLE `student_class_quiz`
-  MODIFY `student_class_quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `student_class_quiz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `subject`
 --
