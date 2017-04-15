@@ -5,7 +5,7 @@
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('assignment_link_student.php'); ?>
+				<?php include('my_classmates_link.php'); ?>
                 <div class="span9" id="content">
                      <div class="row-fluid">
 					   
@@ -50,6 +50,7 @@
 												<th>Date Upload</th>
 												<th>File Name</th>
 												<th>Description</th>
+												<th>Due Date</th>
 												<th></th>
 												</tr>
 												
@@ -65,7 +66,8 @@
 										<tr>
 										 <td><?php echo $row['fdatein']; ?></td>
                                          <td><?php  echo $row['fname']; ?></td>
-                                         <td><?php echo $row['fdesc']; ?></td>                                      
+                                         <td><?php echo $row['fdesc']; ?></td>
+                                         <td><?php echo $row['fdue_date']; ?></td>                                       
                                          <td width="220">
 										 <form id="assign" method="post" action="submit_assignment.php<?php echo '?id='.$get_id ?>&<?php echo 'post_id='.$id ?>">
 										 <input type="hidden" name="id" value="<?php echo $id; ?>">

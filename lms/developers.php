@@ -49,8 +49,8 @@
 								<hr>
 										<p>Name: Faqrul Islam Shaon</p>
 										<p>Address: Middle Badda, Dhaka</p>
-										<p>Email: shaon@gmail.com</p>
-										<p>Position: TBA</p>
+										<p>Email: md_shaon@outlook.com</p>
+										<p>Position: Backend Developer</p>
 								</center>
 								</div>
                             </div>

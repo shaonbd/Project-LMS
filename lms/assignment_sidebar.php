@@ -26,6 +26,14 @@
                                 <input type="text" name="name" Placeholder="File Name"  class="input">
                             </div>
                         </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <label class="control-label" for="inputPassword">Due Date</label>
+                                <input type="text" class="input-block-level datepicker" name="due_date" id="date01" placeholder="Due Date" required/>
+                            </div>
+                        </div>
+
                         <div class="control-group">
                           
                             <div class="controls">

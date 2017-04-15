@@ -41,6 +41,24 @@
                                             <input  name="ln" class="input focused" id="focusedInput" type="text" placeholder = "Lastname" required>
                                           </div>
                                         </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input  name="Eml" class="input focused" id="focusedInput" type="text" placeholder = "Email" required>
+                                          </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input  name="pss" class="input focused" id="focusedInput" type="Password" placeholder = "Password" required>
+                                          </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <input  name="cnt" class="input focused" id="focusedInput" type="text" placeholder = "Contact Number" required>
+                                          </div>
+                                        </div>
 								
 										
 											<div class="control-group">

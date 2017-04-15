@@ -33,6 +33,7 @@
 												<th>Date Upload</th>
 												<th>File Name</th>
 												<th>Description</th>
+												<th>Due Date</th>
 												<th></th>
 												</tr>
 										</thead>
@@ -47,7 +48,8 @@
 								<tr>
 										 <td><?php echo $row['fdatein']; ?></td>
                                          <td><?php  echo $row['fname']; ?></td>
-                                         <td><?php echo $row['fdesc']; ?></td>                                      
+                                         <td><?php echo $row['fdesc']; ?></td>
+                                         <td><?php echo $row['fdue_date']; ?></td>                                      
                                          <td width="150">
 										  <form method="post" action="view_submit_assignment.php<?php echo '?id='.$get_id ?>&<?php echo 'post_id='.$id ?>">
 										
