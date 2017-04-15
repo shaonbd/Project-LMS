@@ -9,12 +9,12 @@
 							<div class="row-fluid">
 
 						<div class="span4">
-						<img class="index_logo" src="admin/images/nsu_logo.png">
+						<img class="index_logo" src="admin/images/oc_logo.png">
 						</div>	
 						<div class="span8">
 						
 						<div class="title">
-							<p class="nsu">North South University</p>
+							
 							<h3>
 
 							<p>Online Classroom</p>
@@ -30,7 +30,7 @@
 						<div class="span12">
 						<br>
 								<div class="motto">
-												<p>Center of Excellence in Higher Education</p>
+										<p></p>
 								</div>		
 						</div>		
 				</div>

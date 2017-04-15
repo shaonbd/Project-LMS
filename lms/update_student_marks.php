@@ -5,7 +5,7 @@
 		<?php include('navbar_teacher.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php //include('class_sidebar.php'); ?>
+				<?php include('update_student_marks_sidebar.php'); ?>
                 <div class="span9" id="content">
                      <div class="row-fluid">
 						
@@ -18,14 +18,26 @@
                         <div class="navbar navbar-inner block-header">
                             <div id="" class="muted pull-right">
 							<?php 
-							$my_student = mysql_query("SELECT * FROM teacher_class_student
-										LEFT JOIN student ON student.student_id = teacher_class_student.student_id INNER JOIN class ON class.class_id = student.class_id where teacher_class_id = '$get_id' order by lastname ")or die(mysql_error());
+							$my_student = mysql_query("SELECT * FROM teacher_class_student JOIN marks ON marks.teacher_class_student_id = teacher_class_student.teacher_class_student_id INNER JOIN full_marks ON full_marks.poll_id = marks.poll_id WHERE full_marks.poll_id = '$get_id' ")or die(mysql_error());
+                            
 							$count_my_student = mysql_num_rows($my_student); ?>
-							Number of Students: <span class="badge badge-info"><?php echo $count_my_student;?>
-                                
-                            </span>
+
+							Number of Students: 
+                            <span class="badge badge-info"><?php echo $count_my_student;?></span>
                                 
 							</div>
+                            <div id="" class="muted pull-left">
+                                <span class="badge badge-info">
+
+                                <?php 
+                                    while ($row = mysql_fetch_array($my_student)) {
+                                        $poll_name = $row['poll_name'];
+                                    }
+                                    echo $poll_name;
+                                ?>
+                                    
+                                </span>
+                            </div>    
                         </div>
                             
             <!-- editing block starts -->
@@ -38,23 +50,30 @@
                     <thead>
                             <tr>
                                 <th>Student Name</th>
-                                <th>NSU ID</th>
-                                <th>Update Marks</th> 
+                                <th>NSU ID</th>                                
+                                <th>Prev. Obtained Marks / Alloted Marks</th>
+                                <th>Score / Alloted Weight(%)</th>
+                                <th>Update Marks</th>
                             </tr>                                                
                     </thead>
 
                 <tbody>
                         <?php
-                            $my_student = mysql_query(" SELECT * FROM student LEFT JOIN teacher_class_student ON teacher_class_student.student_id = student.student_id RIGHT JOIN marks ON marks.teacher_class_student_id = teacher_class_student.teacher_class_student_id WHERE        poll_id = '$get_id' order by firstname")or die(mysql_error());
+                            $my_student = mysql_query(" SELECT * FROM student LEFT JOIN teacher_class_student ON teacher_class_student.student_id = student.student_id RIGHT JOIN marks ON marks.teacher_class_student_id = teacher_class_student.teacher_class_student_id JOIN full_marks ON full_marks.poll_id = marks.poll_id WHERE marks.poll_id = '$get_id' ")or die(mysql_error());
+                                
                                 while($row = mysql_fetch_array($my_student)){
                         
                                 $id = $row['student_id'];
+                                $number = $row['number'];
+                                $percent_score = round(($row['marks'] * $row['poll_weight']) / $row['number']);
                                 ?>
 
                             <tr>
                                 <td><?php echo $row['firstname']." ".$row['lastname']; ?></td>
-                                <td><?php echo $row['student_id']; ?></td>                                    
-                                <td><input type="text" name="<?php echo "marks".$id ?>" id="inputmarks" placeholder="score..."></td>     
+                                <td><?php echo $row['student_id']; ?></td> 
+                                <td><?php echo $row['marks']." / ".$row['number']; ?></td>
+                                <td><?php  echo $percent_score."/". $row['poll_weight']; ?></td>                                   
+                                <td><input type="text" name="<?php echo "marks".$id ?>" id="inputmarks" class="input focused" placeholder="update score..."></td>     
                             </tr>
 
                                                             
@@ -76,7 +95,8 @@
             </form>
 
             
-        <?php if(isset($_POST['submit'])){
+        <?php 
+        if(isset($_POST['submit'])){
 
         $temp_str = "marks";    
 
@@ -93,16 +113,25 @@
 
                     if ($update_marks !== "") {
 
-                        mysql_query("UPDATE marks set marks = '$update_marks' WHERE teacher_class_student_id = '$t_c_std' AND poll_id = '$get_id' ");
+                        if ($update_marks <= $number) {
+                            mysql_query("UPDATE marks set marks = '$update_marks' WHERE teacher_class_student_id = '$t_c_std' AND poll_id = '$get_id' ");
+                        ?>
+                        <script>
+                            window.location = 'update_student_marks.php<?php echo "?id=".$get_id ?>';
+                        </script>  
 
-                    }
+                        <?php
+                        }
+                        else{                           
+                        
+                            echo "Obtained marks can not exceed alloted marks";                       
+                        
+                        }                       
 
-                      
-            ?>
-            
-               
-            <?php
-                } 
+
+                    }                   
+                }
+
             
     } ?>   
 

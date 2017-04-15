@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
-        <title>NSU Online Classroom</title>
+        <title>Online Classroom</title>
 		<meta name="description" content="NSU Online Classroom System">
 		<meta name="keywords" content="NSU,ECE,CLASSROOM,NSU,RZB,CSE">
 		<meta name="author" content="Alvi,Manazir,Pritvi,Shawon">

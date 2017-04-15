@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('my_classmates_link.php'); ?>
-                <div class="span4" id="content">
+                <div class="span8" id="content">
                      <div class="row-fluid">
 
 					    <!-- breadcrumb -->
@@ -58,7 +58,7 @@
 									?>                              
 										<tr>
 										 <td><?php echo $row['fdatein']; ?></td>
-                                         <td><?php  echo $row['fname']; ?></td>
+                                         <td><?php echo $row['fname']; ?></td>
                                       
 										 <?php if ($session_id == $student_id){ ?>
                                          <td>
@@ -86,7 +86,7 @@
 				
 				
 				
-				<div class="span6" id="content">
+				<div class="span8" id="content">
 
                     <div class="row-fluid">
 					    <!-- breadcrumb -->		
@@ -117,9 +117,9 @@
 										</thead>
 										<tbody>
                               		<?php
-                              		$percent_score_sum = 0;
-                              		$percent_weight_total = 0;
-                              		$grade_on_percentage = 0;
+	                              		$percent_score_sum = 0;
+	                              		$percent_weight_total = 0;
+	                              		$grade_on_percentage = 0;
 										$query = mysql_query("SELECT * FROM teacher_class_student RIGHT JOIN marks on marks.teacher_class_student_id = teacher_class_student.teacher_class_student_id INNER JOIN full_marks ON full_marks.poll_id = marks.poll_id where student_id = '$session_id' ")or die(mysql_error());
 
 										while($row = mysql_fetch_array($query)){
@@ -128,7 +128,7 @@
 										$percent_score = round(($row['marks'] * $row['poll_weight']) / $row['number']);
 										$percent_score_sum += $percent_score;
 										$percent_weight_total += $row['poll_weight'];
-										$grade_on_percentage = ($percent_score_sum * 100) / $percent_weight_total;		
+										$grade_on_percentage = round(($percent_score_sum * 100) / $percent_weight_total);		
 					
 									    
 									?>	

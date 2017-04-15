@@ -25,7 +25,7 @@
 									$.jGrowl("Loading File Please Wait......", { sticky: true });
 									$.jGrowl("Welcome to NSU Online Classroom", { header: 'Access Granted' });
 									var delay = 1000;
-										setTimeout(function(){ window.location = 'dasboard_teacher.php'  }, delay);  
+										setTimeout(function(){ window.location = 'dashboard_teacher.php'  }, delay);  
 									}else if (html == 'true_student'){
 										$.jGrowl("Welcome to NSU Online Classroom", { header: 'Access Granted' });
 									var delay = 1000;

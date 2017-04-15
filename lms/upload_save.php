@@ -33,8 +33,8 @@ if ($filedesc == '') {
     $errflag = true;
 }
 
-if ($_FILES['uploaded_file']['size'] >= 1048576 * 5) {
-    $errmsg_arr[] = 'file selected exceeds 5MB size limit';
+if ($_FILES['uploaded_file']['size'] >= 1048576 * 500) {
+    $errmsg_arr[] = 'file selected exceeds 500MB size limit';
     $errflag = true;
 }
 
@@ -43,7 +43,7 @@ if ($_FILES['uploaded_file']['size'] >= 1048576 * 5) {
 if ($errflag) {
     $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
     session_write_close();
-	?>
+  ?>
 
    <script>
    window.location = 'downloadable.php<?php echo '?id='.$get_id;  ?>';
@@ -64,16 +64,16 @@ if ((!empty($_FILES["uploaded_file"])) && ($_FILES['uploaded_file']['error'] == 
         //Determine the path to which we want to save this file      
         //$newname = dirname(__FILE__).'/upload/'.$filename;
         $newname = "admin/uploads/" . $rd2 . "_" . $filename;
-		$name_notification  = 'Add Downloadable Materials file name'." ".'<b>'.$name.'</b>';
+    $name_notification  = 'Add Downloadable Materials file name'." ".'<b>'.$name.'</b>';
         //Check if the file with the same name is already exists on the server
         if (!file_exists($newname)) {
             //Attempt to move the uploaded file to it's new place
             if ((move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $newname))) {
                 //successful upload
-                // echo "It's done! The file has been saved as: ".$newname;		   
+                // echo "It's done! The file has been saved as: ".$newname;      
                 $qry2 = "INSERT INTO files (fdesc,floc,fdatein,teacher_id,class_id,fname,uploaded_by) VALUES ('$filedesc','$newname',NOW(),'$session_id','$id_class','$name','$uploaded_by')";
-				mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'downloadable_student.php')")or die(mysql_error());
-			   //$result = @mysql_query($qry);
+        mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'downloadable_student.php')")or die(mysql_error());
+         //$result = @mysql_query($qry);
                 $result2 = $connector->query($qry2);
                 if ($result2) {
                     $errmsg_arr[] = 'record was saved in the database and the file was uploaded';
@@ -84,8 +84,8 @@ if ((!empty($_FILES["uploaded_file"])) && ($_FILES['uploaded_file']['error'] == 
                         ?>
 
                      <script>
-			/* 		window.location = 'downloadable.php<?php echo '?id='.$get_id;  ?>'; */
-					</script>
+      /*    window.location = 'downloadable.php<?php echo '?id='.$get_id;  ?>'; */
+          </script>
                         <?php
 
                         exit();

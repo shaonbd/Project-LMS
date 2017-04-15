@@ -12,7 +12,7 @@
 									
 					     <ul class="breadcrumb">
 						<?php
-						$school_year_query = mysql_query("select * from school_year order by school_year DESC")or die(mysql_error());
+						$school_year_query = mysql_query("SELECT * from school_year order by school_year DESC")or die(mysql_error());
 						$school_year_query_row = mysql_fetch_array($school_year_query);
 						$school_year = $school_year_query_row['school_year'];
 						?>
@@ -29,6 +29,7 @@
                             <div class="block-content collapse in">
                                 <div class="span12">
 										<div class="alert alert-info"><i class="icon-info-sign"></i> About Me</div>
+										<p>Lorem Ipsum Dolar sit amet....</p>
 								<?php $query= mysql_query("select * from teacher where teacher_id = '$session_id'")or die(mysql_error());
 								$row = mysql_fetch_array($query);
 						?>
@@ -42,7 +43,7 @@
 
 
                 </div>
-				<?php include('teacher_right_sidebar.php') ?>
+				<?php //include('teacher_right_sidebar.php') ?>
             </div>
 		<?php include('footer.php'); ?>
         </div>

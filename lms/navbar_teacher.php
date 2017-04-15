@@ -5,7 +5,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-                   <a class="brand" href="#">Welcome to: NSU Online Classroom</a>
+                   <a class="brand" href="dashboard_teacher.php">Welcome to: Online Classroom</a>
 							<div class="nav-collapse collapse">
 								<ul class="nav pull-right">
 												<?php $query= mysql_query("select * from teacher where teacher_id = '$session_id'")or die(mysql_error());

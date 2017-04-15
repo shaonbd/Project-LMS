@@ -43,7 +43,7 @@
 						
 								<?php  }  ?>
 				
-					<?php $query = mysql_query("select * from teacher_notification
+					<?php $query = mysql_query("SELECT * from teacher_notification
 					LEFT JOIN teacher_class on teacher_class.teacher_class_id = teacher_notification.teacher_class_id
 					LEFT JOIN student on student.student_id = teacher_notification.student_id
 					LEFT JOIN assignment on assignment.assignment_id = teacher_notification.assignment_id 
@@ -57,25 +57,24 @@
 					$id = $row['teacher_notification_id'];
 					
 					
-					$query_yes_read = mysql_query("select * from notification_read_teacher where notification_id = '$id' and teacher_id = '$session_id'")or die(mysql_error());
+					$query_yes_read = mysql_query("SELECT * from notification_read_teacher where notification_id = '$id' and teacher_id = '$session_id' ")or die(mysql_error());
 					$read_row = mysql_fetch_array($query_yes_read);
 					
 					$yes = $read_row['student_read']; 
 				
 					?>
-									<div class="post"  id="del<?php echo $id; ?>">
-										<?php  if ($yes == 'yes'){
-										}else{ 
-										?>
-										  
+							<div class="post"  id="del<?php echo $id; ?>">
+								<?php  if ($yes == 'yes'){
+								}else{ 
+								?>										  
 
-										<input id=""  name="selector[]" type="checkbox" value="<?php echo $id; ?>">	
-										<?php  } ?>	
-											<strong><?php echo $row['firstname']." ".$row['lastname'];  ?></strong>
-											<?php echo $row['notification']; ?> In <b><?php echo $row['fname']; ?></b>
-											<a href="<?php echo $row['link']; ?><?php echo '?id='.$get_id; ?>&<?php echo 'post_id='.$assignment_id; ?>">
-											<?php echo $row['class_name']; ?> 									 
-											</a>
+								<input id=""  name="selector[]" type="checkbox" value="<?phpecho $id; ?>">	
+									<?php  } ?>	
+										<strong><?php echo $row['firstname']." ".$row['lastname'];  ?></strong>
+										<?php echo $row['notification']; ?> In <b><?php echo $row['fname']; ?></b>
+										<a href="<?php echo $row['link']; ?><?php echo '?id='.$get_id; ?>&<?php echo 'post_id='.$assignment_id; ?>">
+										<?php echo $row['class_name']; ?> 									 
+										</a>
 										<hr>
 										<div class="pull-right">
 										<i class="icon-calendar"></i>&nbsp;<?php echo $row['date_of_notification']; ?> 
