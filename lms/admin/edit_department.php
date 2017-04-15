@@ -43,7 +43,7 @@
 														<input id="optionsCheckbox" class="uniform_on" name="selector[]" type="checkbox" value="<?php echo $id; ?>">
 														</td>
 														<td><?php echo $row['department_name']; ?></td>
-														<td><?php echo $row['dean']; ?></td>
+														<td><?php echo $row['chair']; ?></td>
 												
 														<td width="30"><a href="edit_department.php<?php echo '?id='.$id; ?>" class="btn btn-success"><i class="icon-pencil icon-large"></i></a></td>
 

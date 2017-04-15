@@ -20,7 +20,7 @@
 										
 										<div class="control-group">
                                           <div class="controls">
-                                            <input class="input focused" value="<?php echo $row['dean']; ?>" id="focusedInput" name="dn" type="text" placeholder = "Person Incharge">
+                                            <input class="input focused" value="<?php echo $row['chair']; ?>" id="focusedInput" name="dn" type="text" placeholder = "Person Incharge">
                                           </div>
                                         </div>
 								
@@ -45,7 +45,7 @@
  $dn = $_POST['dn'];
  $d = $_POST['d'];
  
- mysql_query("update department set department_name = '$dn' , dean  = '$d' where department_id = '$get_id' ")or die(mysql_error());
+ mysql_query("update department set department_name = '$d', chair  = '$dn' where department_id = '$get_id' ")or die(mysql_error());
  ?>
  <script>
  window.location='department.php'; 
