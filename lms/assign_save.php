@@ -35,8 +35,8 @@ if ($input_name == ""){
 			$name_notification  = 'Add Assignment file name'." ".'<b>'.$name.'</b>';
 	   
                 mysql_query("INSERT INTO assignment (fdesc,fdatein,fdue_date,teacher_id,class_id,fname) VALUES ('$filedesc',NOW(),'$due_date','$session_id','$id_class','$name')")or die(mysql_error());
-				 mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'assignment_student.php')")or die(mysql_error());               
->>>>>>> refs/remotes/origin/master
+				 mysql_query("insert into notification (teacher_class_id,notification,date_of_notification,link) value('$get_id','$name_notification',NOW(),'assignment_student.php')")or die(mysql_error());     
+         
 ?>            
 			<script>
 				window.location = 'assignment.php<?php echo '?id='.$get_id;  ?>';

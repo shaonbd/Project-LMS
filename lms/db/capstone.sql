@@ -3,8 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2017 at 02:54 PM
->>>>>>> refs/remotes/origin/master
+-- Generation Time: Apr 11, 2017 at 09:19 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -96,11 +95,7 @@ CREATE TABLE `assignment` (
 
 INSERT INTO `assignment` (`assignment_id`, `floc`, `fdatein`, `fdue_date`, `fdesc`, `teacher_id`, `class_id`, `fname`) VALUES
 (2, 'uploads/6843_File_Doc3.docx', '2013-10-11', '0000-00-00', 'fasfasf', 13, 36, 'Assignment number 1'),
-<<<<<<< HEAD
 (66, 'admin/uploads/9312_File_22.pdf', '2017-04-12', '2017-04-15', 'Best', 3, 21, 'Assignment 10');
-=======
-(57, 'admin/uploads/4808_File_18.pdf', '2017-04-11', '2017-04-12', 'Right', 3, 21, 'Assignment 1');
->>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -275,6 +270,7 @@ INSERT INTO `department` (`department_id`, `department_name`, `chair`) VALUES
 (2, 'School of Arts and Science', 'DR. Emdadul Haque'),
 (11, 'School of Health & Life Sciences', 'Dr. Sirazul Islam');
 
+
 -- --------------------------------------------------------
 
 --
@@ -296,6 +292,7 @@ CREATE TABLE `event` (
 INSERT INTO `event` (`event_id`, `event_title`, `teacher_class_id`, `date_start`, `date_end`) VALUES
 (15, 'Long Test', 113, '12/05/2013', '12/06/2013'),
 (17, 'sdasf', 147, '11/16/2013', '11/16/2013');
+
 
 -- --------------------------------------------------------
 
@@ -319,12 +316,12 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`file_id`, `floc`, `fdatein`, `fdesc`, `teacher_id`, `class_id`, `fname`, `uploaded_by`) VALUES
-(133, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:31:38', 'sas', 14, 177, 'sss', 'Mr. someone'),
-(132, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:29:53', 'sas', 14, 178, 'sss', 'John snow'),
-(131, 'admin/uploads/7939_File_449E26DB.jpg', '2017-02-20 10:28:09', 'sas', 5, 9, 'sss', 'Sazzad Hossain'),
-(129, 'admin/uploads/7939_File_449E26DB.jpg', '2017-02-20 10:12:38', 'sas', 8, 12, 'sss', 'Rajesh Palit'),
-(130, 'admin/uploads/7939_File_449E26DB.jpg', '2017-02-20 10:26:11', 'sas', 5, 14, 'sss', 'Sazzad Hossain'),
-(128, 'admin/uploads/7614_File_1476273_644977475552481_2029187901_n.jpg', '2017-02-13 13:31:18', 'qwwqw', 3, 186, 'kevi', 'Rezaul Bari'),
+(133, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:31:38', 'sas', 14, 177, 'sss', ''),
+(132, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:29:53', 'sas', 14, 178, 'sss', ''),
+(131, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:28:09', 'sas', 14, 12, 'sss', ''),
+(129, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:12:38', 'sas', 0, 12, 'sss', ''),
+(130, 'admin/uploads/7939_File_449E26DB.jpg', '2014-02-20 10:26:11', 'sas', 0, 12, 'sss', ''),
+(128, 'admin/uploads/7614_File_1476273_644977475552481_2029187901_n.jpg', '2014-02-13 13:31:18', 'qwwqw', 12, 185, 'kevi', 'Ruby Mae Morante'),
 (127, 'admin/uploads/1085_File_Resume.docx', '2014-02-13 12:53:09', 'q', 12, 183, 'q', 'Ruby Mae Morante'),
 (126, 'admin/uploads/7895_File_PERU REPORT.pptx', '2014-02-13 12:35:42', 'chapter 1', 12, 182, 'chapter 1', 'Ruby Mae Morante'),
 (125, 'admin/uploads/2658_File_kevin.docx', '2014-02-13 11:10:56', 'test', 12, 181, 'test', 'Ruby Mae Morante'),
@@ -359,12 +356,8 @@ CREATE TABLE `full_marks` (
 
 INSERT INTO `full_marks` (`poll_id`, `poll_name`, `pdatein`, `poll_weight`, `number`, `teacher_class_id`) VALUES
 (18, 'Ethics in engineering', '2017-04-09 18:41:16', 5, 10, 21),
-<<<<<<< HEAD
 (19, 'quiz1', '2017-04-09 19:09:13', 20, 30, 21),
 (20, 'Mid 1', '2017-04-11 11:42:11', 25, 30, 21);
-=======
-(19, 'quiz1', '2017-04-09 19:09:13', 20, 30, 21);
->>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -399,16 +392,12 @@ INSERT INTO `marks` (`marks_id`, `poll_id`, `marks`, `teacher_class_student_id`)
 (13, 19, 29, 1),
 (14, 19, 27, 2),
 (15, 19, 25, 5),
-<<<<<<< HEAD
 (16, 19, 22, 6),
 (17, 20, 10, 1),
 (18, 20, 10, 2),
 (19, 20, 10, 5),
 (20, 20, 10, 6),
 (21, 20, 10, 8);
-=======
-(16, 19, 22, 6);
->>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -516,7 +505,6 @@ INSERT INTO `notification` (`notification_id`, `teacher_class_id`, `notification
 (27, 21, 'Add Assignment file name <b>Nope</b>', '2017-04-12 00:25:39', 'assignment_student.php'),
 (28, 21, 'Add Assignment file name <b>alvi</b>', '2017-04-12 00:26:27', 'assignment_student.php'),
 (29, 21, 'Add Assignment file name <b>Assignment 10</b>', '2017-04-12 01:15:00', 'assignment_student.php');
->>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -544,7 +532,6 @@ INSERT INTO `notification_read` (`notification_read_id`, `student_id`, `student_
 (15, 21, 'yes', 17),
 (16, 4, 'yes', 18),
 (18, 1, 'yes', 18);
->>>>>>> refs/remotes/origin/master
 
 -- --------------------------------------------------------
 
@@ -997,9 +984,7 @@ INSERT INTO `teacher_class_announcements` (`teacher_class_announcements_id`, `co
 (37, '<p>aaaaa<br />\r\n&nbsp;</p>\r\n', '12', 167, '2014-01-17 14:36:32'),
 (38, '<p>wala klase<img alt=\"sad\" src=\"http://localhost/lms/admin/vendors/ckeditor/plugins/smiley/images/sad_smile.gif\" style=\"height:20px; width:20px\" title=\"sad\" /></p>\r\n', '12', 167, '2014-02-13 13:45:59'),
 (39, '<p>No Class Today</p>\r\n', '1', 2, '2017-03-21 03:57:30'),
-(40, '<p>ghj</p>\r\n', '4', 5, '2017-03-22 02:26:34'),
-(41, '<p>How are you guys?</p>\r\n', '3', 1, '2017-04-11 14:21:33'),
-(42, '<p>ok</p>\r\n\r\n<p>&nbsp;</p>\r\n', '3', 21, '2017-04-11 14:22:44');
+(40, '<p>ghj</p>\r\n', '4', 5, '2017-03-22 02:26:34');
 
 -- --------------------------------------------------------
 
@@ -1162,7 +1147,6 @@ INSERT INTO `user_log` (`user_log_id`, `username`, `login_date`, `logout_date`, 
 (85, 'admin', '2017-04-11 11:03:56', '2017-04-11 18:51:49', 15),
 (86, 'admin', '2017-04-11 12:33:18', '2017-04-11 18:51:49', 15),
 (87, 'admin', '2017-04-11 18:48:31', '2017-04-11 18:51:49', 15);
->>>>>>> refs/remotes/origin/master
 
 --
 -- Indexes for dumped tables
@@ -1402,11 +1386,7 @@ ALTER TABLE `answer`
 -- AUTO_INCREMENT for table `assignment`
 --
 ALTER TABLE `assignment`
-<<<<<<< HEAD
   MODIFY `assignment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
-=======
-  MODIFY `assignment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
->>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `attendance`
 --
@@ -1436,7 +1416,7 @@ ALTER TABLE `content`
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `event`
 --
@@ -1452,13 +1432,11 @@ ALTER TABLE `files`
 --
 ALTER TABLE `full_marks`
   MODIFY `poll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
->>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
   MODIFY `marks_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
->>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `message`
 --
@@ -1474,13 +1452,11 @@ ALTER TABLE `message_sent`
 --
 ALTER TABLE `notification`
   MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
->>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `notification_read`
 --
 ALTER TABLE `notification_read`
   MODIFY `notification_read_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
->>>>>>> refs/remotes/origin/master
 --
 -- AUTO_INCREMENT for table `notification_read_teacher`
 --
@@ -1545,7 +1521,7 @@ ALTER TABLE `teacher_class`
 -- AUTO_INCREMENT for table `teacher_class_announcements`
 --
 ALTER TABLE `teacher_class_announcements`
-  MODIFY `teacher_class_announcements_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `teacher_class_announcements_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `teacher_class_student`
 --

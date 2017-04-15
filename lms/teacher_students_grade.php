@@ -19,8 +19,8 @@
                        <div id="block_bg" class="block">
 
                             <div class="navbar navbar-inner block-header">  
-                             <!-- <a href="teacher_view_grade.php<?php echo "?id=".$get_id;?>"><button>View Grade</button></a> -->                                 
->>>>>>> refs/remotes/origin/master
+
+                             <!-- <a href="teacher_view_grade.php<?php echo "?id=".$get_id;?>"><button>View Grade</button></a> -->                                  
                                    
                             </div>
 

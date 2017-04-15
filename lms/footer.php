@@ -1,7 +1,7 @@
 <center>
 		<footer>
 		
-		<p style ="color:purple" >NSU Online Classroom Copyright 2017</p>
+		<p style ="color:purple" >NSU Online Classroom Copyright 2018</p>
 			
 		</footer>
 </center>
