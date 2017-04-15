@@ -5,7 +5,7 @@
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('my_classmates_link.php'); ?>
+				<?php include('progress_link_student.php'); ?>
                 <div class="span8" id="content">
                      <div class="row-fluid">
 

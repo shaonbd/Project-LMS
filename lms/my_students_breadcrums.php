@@ -1,5 +1,5 @@
 	 <!-- breadcrumb -->
-	<?php $class_query = mysql_query("select * from teacher_class
+	<?php $class_query = mysql_query("SELECT * from teacher_class
 	LEFT JOIN class ON class.class_id = teacher_class.class_id
 	where teacher_class_id = '$get_id'")or die(mysql_error());
 	$class_row = mysql_fetch_array($class_query);

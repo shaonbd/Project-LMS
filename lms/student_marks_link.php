@@ -14,7 +14,7 @@
 	<img id="avatar" src="admin/<?php echo $avatar_location; ?>" class="img-polaroid">
 		<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
 				<li class=""><a href="dashboard_student.php"><i class="icon-chevron-right"></i><i class="icon-chevron-left"></i>&nbsp;Back</a></li>
-				<li class="active"><a href="my_classmates.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-group"></i>&nbsp;My Classmates</a></li>
+				<li class=""><a href="my_classmates.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-group"></i>&nbsp;My Classmates</a></li>
 				<li class=""><a href="progress.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-bar-chart"></i>&nbsp;My Progress</a></li>
 				<li class=""><a href="subject_overview_student.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-file"></i>&nbsp;Subject Overview</a></li>
 				<li class=""><a href="student_attendance.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-calendar"></i>&nbsp;View Attendance</a></li>
@@ -22,6 +22,6 @@
 				<li class=""><a href="assignment_student.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-book"></i>&nbsp;Assignments</a></li>
 				<li class=""><a href="announcements_student.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-info-sign"></i>&nbsp;Announcements</a></li>
 				<li class=""><a href="class_calendar_student.php<?php echo '?id='.$id; ?>"><i class="icon-chevron-right"></i><i class="icon-calendar"></i>&nbsp;Class Calendar</a></li>
-				<li class=""><a href="#"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;My Grades</a></li>
+				<li class="active"><a href="#"><i class="icon-chevron-right"></i><i class="icon-reorder"></i>&nbsp;My Grades</a></li>
 		</ul>
 </div>

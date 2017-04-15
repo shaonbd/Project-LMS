@@ -5,7 +5,7 @@
 		<?php include('navbar_student.php'); ?>
         <div class="container-fluid">
             <div class="row-fluid">
-				<?php include('my_classmates_link.php'); ?>
+				<?php include('subject_overview_link_student.php'); ?>
                 <div class="span9" id="content">
                      <div class="row-fluid">
 					  <!-- breadcrumb -->

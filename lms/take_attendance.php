@@ -7,7 +7,14 @@
         <div class="container-fluid">
             <div class="row-fluid">
 				<?php include('take_attendance_link.php'); ?>
-                <div id="block_bg" class="block">
+                <div class="span8" id="content">
+                     <div class="row-fluid">					
+
+					<?php include('my_students_breadcrums.php'); ?>
+
+                    <!-- block -->
+
+                    <div id="block_bg" class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div id="" class="muted pull-right">
 								<?php 
@@ -64,7 +71,7 @@
 														
 										</tbody>
 									</table>
-									<input type="submit" value="Submit" name="submit">
+									<input type="submit" value="Submit" name="submit" class="btn btn-success">
 									</form>
                                 </div>
 

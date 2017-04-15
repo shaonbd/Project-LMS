@@ -7,10 +7,20 @@
             <div class="row-fluid">
 				<?php include('update_student_marks_sidebar.php'); ?>
                 <div class="span9" id="content">
-                     <div class="row-fluid">
-						
+                    <div class="row-fluid">						
 
-					<?php include('my_students_breadcrums.php'); ?>
+					<?php 
+
+                        $class_query = mysql_query("SELECT * from class LEFT JOIN teacher_class ON teacher_class.class_id = class.class_id JOIN full_marks ON full_marks.teacher_class_id = teacher_class.teacher_class_id where poll_id = '$get_id'")or die(mysql_error());
+
+                        $class_row = mysql_fetch_array($class_query);
+                    ?>
+                                    
+                        <ul class="breadcrumb">
+                            <li><a href="#"><?php echo $class_row['class_name']; ?></a> <span class="divider">/</span></li>
+                            <li><a href="#">Academic Year: <?php echo $class_row['school_year']; ?></a> <span class="divider">/</span></li>
+                            <li><a href="#"><b>My Students</b></a></li>
+                        </ul>
 
                     <!-- block -->
 

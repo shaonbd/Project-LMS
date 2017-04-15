@@ -64,7 +64,7 @@
                                         $full_marks = $_POST['full_marks'];
                                         $poll_weight = $_POST['poll_weight'];
 
-                                        $check_pollname = mysql_query("Select poll_name from full_marks where poll_name = '$poll_name' ");
+                                        $check_pollname = mysql_query(" SELECT poll_name from full_marks where poll_name = '$poll_name' ");
 
                                         if(mysql_num_rows($check_pollname) > 0){
 

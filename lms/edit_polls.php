@@ -9,22 +9,24 @@
                 <div class="span8" id="content">
                      <div class="row-fluid">						
 
-					<?php include('my_students_breadcrums.php'); ?>
+					<?php 
+
+                        $class_query = mysql_query("SELECT * from class LEFT JOIN teacher_class ON teacher_class.class_id = class.class_id JOIN full_marks ON full_marks.teacher_class_id = teacher_class.teacher_class_id where poll_id = '$get_id'")or die(mysql_error());
+
+                        $class_row = mysql_fetch_array($class_query);
+                    ?>
+                                    
+                        <ul class="breadcrumb">
+                            <li><a href="#"><?php echo $class_row['class_name']; ?></a> <span class="divider">/</span></li>
+                            <li><a href="#">Academic Year: <?php echo $class_row['school_year']; ?></a> <span class="divider">/</span></li>
+                            <li><a href="#"><b>My Students</b></a></li>
+                        </ul>
 
                     <!-- block -->
 
                     <div id="block_bg" class="block">
                         <div class="navbar navbar-inner block-header">
-                            <div id="" class="muted pull-right">
-							<?php 
-							$my_student = mysql_query("SELECT * FROM teacher_class_student LEFT JOIN student ON student.student_id = teacher_class_student.student_id INNER JOIN class ON class.class_id = student.class_id where teacher_class_id = '$get_id' order by lastname ")or die(mysql_error());
-
-							$count_my_student = mysql_num_rows($my_student); ?>
-							Number of Students: <span class="badge badge-info"><?php echo $count_my_student;?>
-                                
-                            </span>
-                                
-							</div>
+                            
                         </div>
                             
             <!-- editing block starts -->
